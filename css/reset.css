@@ -1,0 +1,805 @@
+/* ---------------------------------------------------------
+ *      Table of Contents
+ * ---------------------------------------------------------
+ *      I. Framework Reset.css Library
+ *      II. Framework Styling for Uppercase and Lowercase   
+ *      III. Framework Styling for Grid System
+ *      IV. Framework Grid System 4 Major Breakpoints
+ *      V. Framework Styling for Type
+ *      VI. Framework Styling for Paragraph Border Around Box
+ *      VII. Framework Styling for Jumbotron
+ *      VIII. Framework Styling for Container
+ *      IX. Framework Styling for Tables
+ *      X. Framework Style for Text Area
+ *      XI. Framework Style for Buttons
+ *      XII. Framework Style for Responsive Image
+ *      XIII. Framework Clearfix
+ *      XIV. Framework Quick Floats
+ *      XV. Framework no-print
+ *      XVI. Framework Styling for Form Elements
+ * ----------------------------------------------------------
+ *      Color Guide
+ * ----------------------------------------------------------
+ *      mark -> yellow: #ff0
+ *      fieldset border -> grey: #c0c0c0
+ *      .jumbotron background -> neon-green: #00FF99
+ *      .tableBasic -> border: grey: #e3e3e3 
+ *      .tableBasic -> background: grey-white: #f2f2f2
+ *      input type -> background: neon-blue: #09c
+ *      input type -> hover light-neon-blue: #70d5f5
+ *      input type -> hover text light-yellow: #f8f81a
+ *      button tag -> background: #3beb3b
+ *      button tag -> hover text light-yellow: #f8f81a
+ * ---------------------------------------------------------- */
+
+/* -----------------------------------
+ *      I. Framework Reset.css Library
+ * ----------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section, summary {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+a {
+    background: transparent;
+}
+img {
+    border: 0;
+}
+button {
+    overflow: visible;
+}
+textarea {
+    overflow: auto;
+}
+a:active,
+a:hover {
+    outline: 0;
+}
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+b,
+strong {
+    font-weight: bold;
+}
+dfn {
+    font-style: italic;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+mark {
+    background: #ff0;
+    color: #000;
+}
+small {
+    font-size: 80%;
+}
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+figure {
+    margin: 1em 40px;
+}
+pre {
+    overflow: auto;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td,
+th {
+    padding: 0;
+}
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+    margin: 0;
+    /* 3 */
+}
+button,
+select {
+    text-transform: none;
+}
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+input {
+    line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+legend {
+    border: 0;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+}
+ul,
+ol {
+    margin: 1em 0;
+    padding-left: 40px;
+}
+ul {
+    list-style-type: circle;
+}
+ol {
+    list-style-type: lower-alpha;
+}
+figure {
+    margin: 1em 0;
+}
+/* ----------------------------------------------------
+ *    II. Framework Styling for Uppercase and Lowercase
+ * ----------------------------------------------------- */
+.uppercase {
+    text-transform: uppercase;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+/* -----------------------------------------
+ *    III. Framework Styling for Grid System
+ * ----------------------------------------- */
+.row, 
+.col {
+    box-sizing: border-box;
+}
+.row::before,
+.row::after {
+    content: " ";
+    display: table;
+}
+.row::after {
+    clear: both;
+}
+body { 
+    margin: 2.1em 3.2em 4.4em 3.2em;
+}
+.col {
+    position: relative;
+    float: left;
+}
+.col + .col {
+    margin-left: 1.6%;
+}
+.col-1 {
+    width: 6.86666666667%;
+}
+.col-2 {
+    width: 15.3333333333%;
+}
+.col-3 {
+    width: 23.8%;
+}
+.col-4 {
+    width: 32.2666666667%;
+}
+.col-5 {
+    width: 40.7333333333%;
+}
+.col-6 {
+    width: 49.2%;
+}
+.col-7 {
+    width: 57.6666666667%;
+}
+.col-8 {
+    width: 66.1333333333%;
+}
+.col-9 {
+    width: 74.6%;
+}
+.col-10 {
+    width: 83.0666666667%;
+}
+.col-11 {
+    width: 91.5333333333%;
+}
+.col-12 {
+    width: 100%;
+}
+.col-center {
+    margin: auto;
+    float: none;
+}
+/* -------------------------------------------------
+ *     IV. Framework Grid System 4 Major Breakpoints
+ * -------------------------------------------------*/
+@media only screen and (max-width: 1250px) {
+    margin-bottom:4.3em;
+}
+@media only screen and (max-width: 960px) {
+     body{margin: 1.5em 2.7em 4em 2.7em;}
+}
+@media only screen and (max-width: 768px) {
+    body{margin: 1em 2em 3em 2em;}
+}
+@media only screen and (max-width: 480px) {
+    
+    .col-1, 
+    .col-2, 
+    .col-3, 
+    .col-4, 
+    .col-5, 
+    .col-6, 
+    .col-7, 
+    .col-8, 
+    .col-9, 
+    .col-10, 
+    .col-11, 
+    .col-12 {
+        width: auto;
+        float: none;
+        margin: 0.8em 0.5em 1em 0.5em;
+        
+    }
+    .col + .col {
+        margin-left: 0%;
+    }
+}
+/* ---------------------------------
+ *     V. Framework Styling for Type
+ * ---------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Cardo);
+.serif {
+    font-family: "Cardo", Times, serif;
+}
+.sansserif {
+    font-family: "Raleway", Helvetica, sans-serif;
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-size: 100%;
+    line-height: 1.7em;
+}
+body,
+button,
+input,
+select,
+textarea {
+    font-family: 'Cardo', serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.3em;
+    margin-top: 1.8em;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.7em;
+}
+h3 {
+    font-size: 1.4em;
+}
+h4 {
+    font-size: 1.2em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+    font-size: 0.8em;
+}
+p {
+    font-size: 1.2em;
+    padding: 0.3em;
+}
+pre {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    padding: 0.7em;
+}
+/* ---------------------------------------------------------
+ *     VI. Framework Styling for Paragraph Border Around Box
+ * ---------------------------------------------------------*/
+.dotted {
+    outline-style: dotted;
+}
+.dashed {
+    outline-style: dashed;
+}
+.solid {
+    outline-style: solid;
+}
+.double {
+    outline-style: double;
+}
+.groove {
+    outline-style: groove;
+}
+.ridge {
+    outline-style: ridge;
+}
+.inset {
+    outline-style: inset;
+}
+.outset {
+    outline-style: outset;
+}
+/* ----------------------------------------
+ *     VII. Framework Styling for Jumbotron
+ * ----------------------------------------*/
+.jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    text-align: center;    
+    color: inherit;
+    background: #00FF99;
+}
+.jumbotron h1 {
+    font-style: italic;
+}
+.jumbotron p {
+    font-size: 2em;
+    font-style: italic; 
+}
+.jumbotron h1,
+.jumbotron .h1 {
+    color: inherit;
+}
+.jumbotron p {
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200;
+}
+.jumbotron > hr {
+    border-top-color: #d5d5d5;
+}
+.container .jumbotron,
+.container-fluid .jumbotron {
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 6px;
+}
+.jumbotron .container {
+    max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .jumbotron {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .container .jumbotron,
+  .container-fluid .jumbotron {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .jumbotron h1,
+  .jumbotron .h1 {
+    font-size: 63px;
+  }
+}
+/* -----------------------------------------
+ *     VIII. Framework Styling for Container
+ * -----------------------------------------*/
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* ------------------------------------
+ *     IX. Framework Styling for Tables
+ * ------------------------------------*/
+.tableBasic {
+    border: 1px solid #e3e3e3;
+    background: #f2f2f2;
+    width: 100%;
+    border-radius: 6px;
+}
+.tableBasic td, .tableBasic th {
+	padding: 5px;
+	color: #333;
+}
+.tableBasic thead {
+	font-family: 'Cardo', serif;
+	padding: .2em 0 .2em .5em;
+	text-align: left;
+	color: #4B4B4B;
+	background: #C8C8C8;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#e3e3e3), color-stop(.6,#B3B3B3));
+	background-image: -moz-linear-gradient(top, #D6D6D6, #B0B0B0, #B3B3B3 90%);
+	border-bottom: solid 1px #999;
+}
+.tableBasic th {
+	font-family: 'Raleway', sans-serif;
+	font-size: 17px;
+	line-height: 20px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	text-shadow: white 1px 1px 1px;
+}
+.tableBasic td {
+	line-height: 20px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	border-bottom: 1px solid #fff;
+	border-top: 1px solid #fff;
+}
+.tableBasic td:hover {
+	background: #fff;
+}
+.tableBasicStriped {
+	border: 1px solid #e3e3e3;
+	background: #b8e0b6;
+    width: 100%;
+	border-radius: 6px;
+}
+.tableBasicStriped td, .tableBasicStriped th {
+	padding: 5px;
+	color: #333;
+}
+.tableBasicStriped thead {
+	font-family: 'Cardo', serif;
+	padding: .2em 0 .2em .5em;
+	text-align: left;
+	color: #4B4B4B;
+	background: #C8C8C8;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#e3e3e3), color-stop(.6,#B3B3B3));
+	background-image: -moz-linear-gradient(top, #D6D6D6, #B0B0B0, #B3B3B3 90%);
+	border-bottom: solid 1px #999;
+}
+.tableBasicStriped th {
+	font-family: 'Raleway', sans-serif;
+	font-size: 17px;
+	line-height: 20px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	text-shadow: white 1px 1px 1px;
+}
+.tableBasicStriped tbody tr:nth-child(odd) {
+    background: #eee;
+}
+.tableBasicStriped td {
+	line-height: 20px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	border-bottom: 1px solid #fff;
+	border-top: 1px solid #fff;
+}
+.tableBasicStriped td:hover {
+	background: #fff;
+}
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+table, thead, tbody, th, td, tr, caption { 
+    display: block; 
+}
+thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+tr { 
+    border: 1px solid #ccc; 
+}
+td { 
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+}
+td:before { 
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+}
+td:nth-of-type(1):before { content: "First Name"; }
+td:nth-of-type(2):before { content: "Last Name"; }
+td:nth-of-type(3):before { content: "Job Title"; }
+td:nth-of-type(4):before { content: "Favorite Color"; }
+td:nth-of-type(5):before { content: "Wise Words"; }
+td:nth-of-type(6):before { content: "Movie Name"; }
+td:nth-of-type(7):before { content: "Date of Birth"; }
+td:nth-of-type(8):before { content: "Dream Vacation City"; }
+td:nth-of-type(9):before { content: "GPA"; }
+td:nth-of-type(10):before { content: "Arbitrary Data"; }
+}
+/* -----------------------------------
+ *    X. Framework Style for Text Area
+ * -----------------------------------*/
+textarea.medMessage{
+    width: 70%;
+    display: block;
+    height: auto; 
+    max-width: 375px;
+    height: 150px;
+    display: block;
+    font-size: 110%;
+}
+/* ----------------------------------
+ *    XI. Framework Style for Buttons
+ * ----------------------------------*/
+input[type=submit], input[type=reset], input[type=button] {
+    background: #09C;
+    color: #fff;
+    font-size: 85%;
+    border-radius: 10px;
+    border: 0px solid #fff;
+    box-shadow: 0px 0px 6px rgba(63, 165, 190, 1);
+}
+input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
+    background: #70d5f5;
+    color: #f8f81a;
+    border: 1px solid #999;
+}
+input[type=submit]:active, input[type=reset]:active, input[type=button]:active {
+    background: #0fb8ef;
+    color: #f8f81a;
+    border: 1px solid #999;
+}
+button[type=submit], button[type=reset], button[type=button] {
+    background: #3beb3b;
+    color: #fff;
+    font-size: 85%;
+    border-radius: 10px;
+    border: 0px solid #fff;
+    box-shadow: 0px 0px 6px rgba(63, 165, 190, 1);
+}
+button[type=submit]:hover, button[type=reset]:hover, button[type=button]:hover {
+    border-radius: 10px;
+    background: #3beb3b;
+    color: #f8f81a;
+    transition-duration: 0.4s;
+}
+button[type=submit]:active, button[type=reset]:active, button[type=button]:active {
+    background: #3beb3b;
+    color: #f8f81a;
+    border: 1px solid #999;
+}
+.buttonLg {
+    height: 100px;
+    font-size: 72px;
+}
+.buttonNm {
+    height: 80px;
+    font-size: 36px;
+}
+.buttonSm {
+    height: 62px;
+    font-size: 24px;
+}
+.buttonXs {
+    height:42px;
+    font-size: 10px;
+}
+#disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.error {
+    background: #e8b6b5;
+}
+.warn {
+    background: #ead8b3;
+}
+/* ---------------------------------------------
+ *    XII. Framework Style for Responsive Image
+ * ---------------------------------------------*/
+img.responsive {
+    width: 100%;
+    height: auto;
+}
+img.hide { 
+    display: none;
+}
+img.border {
+    border: 1px solid #ccc;
+}
+a img {
+    border: none;
+}
+img.top {
+    vertical-align: text-top;
+}
+img.bottom {
+    vertical-align: text-bottom;
+}
+/* ---------------------------
+ *    XIII. Framework Clearfix
+ * ---------------------------*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+/* ------------------------------
+ *    XIV. Framework Quick Floats
+ * ------------------------------*/
+left {
+    float: left;
+}
+right {
+    float: right;
+}
+/* -------------------------
+ *    XV. Framework no-print
+ * -------------------------*/
+@media print {
+  .no-print {
+    display: none;
+  }
+}
+.no-print {
+  @media print {
+    display: none;
+  }
+}
+/* -------------------------------------------
+ *    XVI. Framework Styling for Form Elements
+ * -------------------------------------------*/
+input[type="email"], 
+input[type="number"], 
+input[type="search"], 
+input[type="text"], 
+input[type="tel"], 
+input[type="url"], 
+input[type="password"], 
+textarea, select {
+    height: 35px;
+    padding: 5px 10px;
+    background: #fff;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+textarea {
+    min-height: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+input[type="email"]: focus,
+input[type="number"]: focus,
+input[type="search"]: focus,
+input[type="text"]: focus,
+input[type="tel"]: focus,
+input[type="url"]: focus,
+input[type="password"]: focus,
+textarea: focus,
+select: focus {
+    border: 1px solid #33c3f0;
+    outline: 0;
+}
+label, legend {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: 400;
+}
+legend {
+    background: #efefef;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: left;
+    text-transform: uppercase;
+}
+fieldset {
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 20px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline;
+}
+label > .label-body {
+    display: inline-block;
+    margin-left: 2px;
+    font-weight: normal;
+}
+
+
+canvas { border: 1px solid black; }

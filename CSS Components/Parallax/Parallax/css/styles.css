@@ -1,0 +1,17 @@
+.parallax {
+    background-attachment: fixed;
+    background: fixed;
+    /* use this url link when showing example in WP */
+/*    background-image: url("http://dev-fewd2group7.pantheonsite.io/wp-content/uploads/2016/08/deer2.jpg");*/
+    background-image: url('../images/deer2.jpg');
+    position: relative;
+    background-size: 100%;
+    background-position: top;
+    background-color: black;
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    width: 90%;
+    height: 555px;
+    z-index: 200;
+    margin: 0 auto;
+}

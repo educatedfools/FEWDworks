@@ -1,0 +1,11 @@
+.more_arrow {
+    background: rgba(0, 0, 0, 0) url("../images/more_arrow.png") no-repeat scroll center 15px;
+    color: #fd7a06;
+    font-size: 0.7em;
+    height: 30px;
+    line-height: 31px;
+    margin: auto;
+    width: 80px;
+    margin-top: 15px;
+    text-align: center;
+}
